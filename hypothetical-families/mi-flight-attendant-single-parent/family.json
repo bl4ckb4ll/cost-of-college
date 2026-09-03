@@ -1,0 +1,45 @@
+{
+  "id": "mi-flight-attendant-single-parent",
+  "status": "prototype",
+  "student": {
+    "age": {"value": 17, "kind": "assumed"},
+    "state": {"value": "Michigan", "kind": "assumed"},
+    "lives_with": {"value": "mother", "kind": "assumed"}
+  },
+  "household": {
+    "parents_separated": {"value": true, "kind": "assumed"},
+    "family_size": {"value": 2, "kind": "assumed"},
+    "other_parent_actual_annual_contribution": {"value": 0, "kind": "assumed", "unit": "USD"},
+    "mother_actual_annual_college_contribution": {"value": 2000, "kind": "assumed", "unit": "USD"}
+  },
+  "mother": {
+    "occupation": {
+      "title": "Flight Attendants",
+      "soc_code": "53-2031",
+      "source": "BLS OEWS",
+      "source_year": 2025,
+      "geography": "United States",
+      "wage_statistic": "median annual wage",
+      "wage": {"value": 63580, "kind": "measured", "unit": "USD"},
+      "source_url": "https://www.bls.gov/ooh/transportation-and-material-moving/flight-attendants.htm"
+    },
+    "tax_income": {
+      "wages": {"value": 63580, "kind": "calculated", "unit": "USD", "from": "occupation.wage"},
+      "overtime_premium": {"value": 0, "kind": "assumed", "unit": "USD"},
+      "taxable_interest": {"value": 0, "kind": "assumed", "unit": "USD"},
+      "dividends": {"value": 0, "kind": "assumed", "unit": "USD"},
+      "capital_gains": {"value": 0, "kind": "assumed", "unit": "USD"},
+      "business_income": {"value": 0, "kind": "assumed", "unit": "USD"},
+      "retirement_income": {"value": 0, "kind": "assumed", "unit": "USD"},
+      "other_taxable_income": {"value": 0, "kind": "assumed", "unit": "USD"},
+      "adjustments_to_income": {"value": 0, "kind": "assumed", "unit": "USD"},
+      "agi": {"value": 63580, "kind": "calculated", "unit": "USD"}
+    }
+  },
+  "aid": {
+    "award_year": null,
+    "tax_year": 2025,
+    "eligible_for_fafsa_calculation": false,
+    "reason": "Prototype uses May 2025 occupational wage data. A FAFSA run requires inputs aligned to the award year's specified federal tax year."
+  }
+}
